@@ -18,6 +18,7 @@ class LoginForm extends Component {
         const { email, password, error } = this.props;
         console
         this.props.loginUser({ email, password, error });
+        // Actions.dashboard();
     }
     renderButton() {
         if (this.props.loading) {
@@ -27,8 +28,6 @@ class LoginForm extends Component {
             <Button block success style={styles.buttonStyle} onPress={this.onButtonPress.bind(this)} >
                 <Text> Sign in </Text>
             </Button>
-
-            // </Button>
         );
     }
     render() {
@@ -63,10 +62,10 @@ class LoginForm extends Component {
                             {this.renderButton()}
                         </CardItem>
                         <CardItem>
-                            <Text style={styles.textStyle}> Forget Password? </Text>
+                            <Text style={styles.textStyle} > Forget Password? </Text>
                         </CardItem>
                         <CardItem>
-                            <Text style={{ marginLeft: 90, marginTop: 30 }}>  Do not have an account? </Text>
+                            <Text style={{ marginLeft: 90, marginTop: 30 }} onPress={() => Actions.forgotpassword()} >  Do not have an account? </Text>
                         </CardItem>
                         <CardItem>
                             <Text style={styles.textStyle2} onPress={() => Actions.signup()}> Register  </Text>
