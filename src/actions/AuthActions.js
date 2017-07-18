@@ -51,7 +51,7 @@ const loginUserSuccess = (dispatch, user) => {
         type: LOGIN_USER_SUCCESS,
         payload: user
     });
-    // Actions.main();
+    Actions.main();
 };
 
 const loginUserFail = (dispatch) => {
@@ -73,7 +73,6 @@ const signupUserSuccess = (dispatch, user) => {
         type: SIGNUP_USER_SUCCESS,
         payload: user
     });
-    // Actions.main();
 };
 
 const signupUserFail = (dispatch) => {
